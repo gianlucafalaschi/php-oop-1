@@ -13,6 +13,11 @@ public function __construct($_title, $_genre) {
     $this->genre = $_genre;
 }
 
+// Funzione che da il nome e l'anno
+public function getMovieTitleAndYear() {
+    return 'Titolo del film:' . ' ' . $this->title . ' ' . 'Anno del film:' . ' ' . $this->year; 
+}
+
 }
 
 
@@ -23,6 +28,7 @@ $indipendeceDay->director = 'Roland Emmerich';
 $indipendeceDay->year = '1996';
 
 var_dump($indipendeceDay);
+echo $indipendeceDay->getMovieTitleAndYear();
 
 $interstellar = new Movie('Interstellar', 'Fantascienza');
 /* $interstellar->title = 'Interstellar'; */
